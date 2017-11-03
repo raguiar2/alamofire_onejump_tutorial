@@ -34,7 +34,7 @@ method: DELETE
 oppurtunity list:
 url: https://www.onejump.org/api/v1/students/opportunity_list
 needs access token: yes
-headers: not in doc. ask developer. 
+headers: Not finished. Waiting on developer. 
 method: GET
 
 
