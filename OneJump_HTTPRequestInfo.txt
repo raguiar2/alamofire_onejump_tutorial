@@ -1,0 +1,42 @@
+Sign up: 
+url: https://www.onejump.org/api/v1/students/sign_up
+needs access token: no
+parameters: student object (see word doc)
+method: POST
+
+
+Sign in:
+url: https://www.onejump.org/api/v1/students/sign_in
+needs access token: no
+parameters: student object, email, password
+method: POST
+
+add teacher: 
+url: https://www.onejump.org/api/v1/students/add_teacher
+needs access token: yes
+parameters: student object, class code (in word doc)
+method: POST
+
+favorite oppurtunity: 
+url: https://www.onejump.org/api/v1/students/favorite_opportunity
+needs access token: yes
+parameters: student object, oppurtunity parameter (see word doc)
+method: POST
+
+
+delete favorite
+url: https://www.onejump.org/api/v1/students/delete_favorite_opportunity
+needs access token: yes
+parameters: student object, student favorite (see word doc)
+method: DELETE
+
+
+oppurtunity list:
+url: https://www.onejump.org/api/v1/students/opportunity_list
+needs access token: yes
+headers: not in doc. ask developer. 
+method: GET
+
+
+
+

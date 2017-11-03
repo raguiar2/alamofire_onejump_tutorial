@@ -13,7 +13,24 @@
 		8BC2E6FD1FABE56B0066F88B /* AlamoFireProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2E6FB1FABE56B0066F88B /* AlamoFireProject.xcdatamodeld */; };
 		8BC2E6FF1FABE56B0066F88B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2E6FE1FABE56B0066F88B /* Assets.xcassets */; };
 		8BC2E7021FABE56B0066F88B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2E7001FABE56B0066F88B /* LaunchScreen.storyboard */; };
+		8BC2E70A1FABE9060066F88B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC2E7091FABE9060066F88B /* Alamofire.framework */; };
+		8BC2E70B1FABED1F0066F88B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC2E7091FABE9060066F88B /* Alamofire.framework */; };
+		8BC2E70C1FABED1F0066F88B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC2E7091FABE9060066F88B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BC2E70D1FABED200066F88B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8BC2E70C1FABED1F0066F88B /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8BC2E6F11FABE56B0066F88B /* AlamoFireProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamoFireProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +41,7 @@
 		8BC2E6FE1FABE56B0066F88B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BC2E7011FABE56B0066F88B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BC2E7031FABE56B0066F88B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BC2E7091FABE9060066F88B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC2E70A1FABE9060066F88B /* Alamofire.framework in Frameworks */,
+				8BC2E70B1FABED1F0066F88B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +76,7 @@
 		8BC2E6F31FABE56B0066F88B /* AlamoFireProject */ = {
 			isa = PBXGroup;
 			children = (
+				8BC2E7091FABE9060066F88B /* Alamofire.framework */,
 				8BC2E6F41FABE56B0066F88B /* AppDelegate.swift */,
 				8BC2E6F61FABE56B0066F88B /* ViewController.swift */,
 				8BC2E6F81FABE56B0066F88B /* Main.storyboard */,
@@ -77,6 +98,7 @@
 				8BC2E6ED1FABE56B0066F88B /* Sources */,
 				8BC2E6EE1FABE56B0066F88B /* Frameworks */,
 				8BC2E6EF1FABE56B0066F88B /* Resources */,
+				8BC2E70D1FABED200066F88B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,6 +301,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AlamoFireProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vegans.AlamoFireProject;
@@ -293,6 +319,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AlamoFireProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vegans.AlamoFireProject;
