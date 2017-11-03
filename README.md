@@ -6,7 +6,28 @@ Installing alamofire can be done easily using cocoapods or carthage. Info about 
 https://github.com/Alamofire/Alamofire
 
 ## Installing with cocoapods
+First, run 
+```
+$ gem install cocoapods
+```
+to make sure you have cocoapods on your computer. 
+Then, create a podfile in your project by using
+``` $ vim Podfile```
+Then, paste
+```
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
 
+target '<Your Target Name>' do
+    pod 'Alamofire', '~> 4.5'
+end
+```
+in your podfile. 
+
+Then, run 
+```pod install``` 
+from your project directory. 
 
 ## Installing with Carthage
 First, you need to install Carthage on your computer. To do this on a mac, first install homebrew at https://brew.sh/.
@@ -27,6 +48,7 @@ into your Cartfile.
 After this, run ```carthage update``` in your project directory (this could take a while) to build the framework,
 and drag the built Alamofire.framework into your Xcode project. 
 
+### Linking Alamofire
 The last step is to go to the 'general' tab of your xcode project,
 and add "Alamofire.framework" to your linked Frameworks and Libraries, and
 the Alamofire executable in the "Alamofire.framework" in the Enbedded Binaries of your project.
