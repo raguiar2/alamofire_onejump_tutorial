@@ -32,7 +32,8 @@ class ViewController: UIViewController {
         
         
         // We can also use the auth header in our onejump requests where it's required
-        oneJumpAddTeacher()
+        //oneJumpAddTeacher()
+        oneJumpLoginRequest()
 
     }
 
@@ -40,6 +41,19 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // This request works with dummy email.
+    // Replace it with real email and password and it should work too.
+    func oneJumpLoginRequest(){
+        let url = "https://www.onejump.org/api/v1/students/sign_in"
+        let params = ["email": "usamakhan1234@gmail.com", "password": "12345678"]
+        Alamofire.request(url, method:.post, parameters: params).responseJSON { response in
+            debugPrint(response)
+        }
+
+    }
+    
+    
     
     func sendFirstRequest(){
         Alamofire.request("https://httpbin.org/get").responseJSON { response in
@@ -132,7 +146,7 @@ class ViewController: UIViewController {
         let url = "https://www.onejump.org/api/v1/students/sign_up"
         // we don't need the auth token for the sign_up and log_in requests.
         // but we need it for everything else.
-        let studentprops =  ["email":"rui7947@gmail.com",
+        let studentprops =  ["email":"raguiar2@stanford.edu",
         "school":"abc",
         "city":"Lahore",
         "gpa":"3.4",
